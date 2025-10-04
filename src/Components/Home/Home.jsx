@@ -1,6 +1,10 @@
 import React from 'react';
 import { FaPlay } from "react-icons/fa";
 import About from '../About/About';
+import Subscrib from '../Subscrib/Subscrib';
+import ServicesSection from '../ServicesSection/ServicesSection';
+import Success from '../Success/Success';
+import GlobalProjects from '../GlobalProjects/GlobalProjects';
 
 const Home = () => {
     return (
@@ -42,6 +46,10 @@ const Home = () => {
                 </div>
             </section>
             <About />
+            <ServicesSection />
+            <Subscrib />
+            <GlobalProjects />
+            <Success />
         </div>
     );
 };
