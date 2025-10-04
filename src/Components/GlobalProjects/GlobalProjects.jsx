@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 
 const projects = [
@@ -36,46 +36,71 @@ const projects = [
 
 const GlobalProjects = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [cardsPerView, setCardsPerView] = useState(3);
 
-  const cardsPerView = 3;
+  // Update cardsPerView based on window width
+  const updateCardsPerView = () => {
+    if (window.innerWidth < 768) {
+      setCardsPerView(1); // Mobile
+    } else {
+      setCardsPerView(3); // Tablet/Desktop
+    }
+  };
+
+  useEffect(() => {
+    updateCardsPerView();
+    window.addEventListener("resize", updateCardsPerView);
+    return () => window.removeEventListener("resize", updateCardsPerView);
+  }, []);
 
   const prevSlide = () => {
-    setCurrentIndex(
-      currentIndex === 0 ? projects.length - cardsPerView : currentIndex - 1
+    setCurrentIndex((prev) =>
+      prev === 0 ? projects.length - cardsPerView : prev - 1
     );
   };
 
   const nextSlide = () => {
-    setCurrentIndex(
-      currentIndex >= projects.length - cardsPerView ? 0 : currentIndex + 1
+    setCurrentIndex((prev) =>
+      prev >= projects.length - cardsPerView ? 0 : prev + 1
     );
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 py-10">
-      <p className="text-green-500 text-sm font-medium mb-2">Latest Project</p>
-      <h2 className="text-3xl font-bold mb-6">Let’s Look at Our Global Projects</h2>
+    <section className="max-w-6xl mx-auto px-4 py-16">
+      {/* Header */}
+      <div className="text-center mb-10">
+        <p className="text-green-500 text-sm font-medium mb-2 uppercase tracking-wide">
+          Latest Project
+        </p>
+        <h2 className="text-4xl font-bold text-gray-800">
+          Let’s Look at Our Global Projects
+        </h2>
+      </div>
 
+      {/* Carousel */}
       <div className="relative overflow-hidden">
-        {/* Slides */}
         <div
-          className="flex transition-transform duration-500"
-          style={{ transform: `translateX(-${(currentIndex * 100) / cardsPerView}%)` }}
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{
+            transform: `translateX(-${(currentIndex * 100) / cardsPerView}%)`,
+            width: `${(projects.length / cardsPerView) * 100}%`,
+          }}
         >
           {projects.map((project) => (
             <div
               key={project.id}
-              className="min-w-1/3 px-2" // each card takes 1/3 of the container
+              className={`px-3 flex-shrink-0`}
+              style={{ width: `${100 / cardsPerView}%` }}
             >
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-64 object-cover"
                 />
-                <div className="p-4 flex items-center justify-between">
+                <div className="p-5 flex items-center justify-between">
                   <div>
-                    <h3 className="font-bold">{project.title}</h3>
+                    <h3 className="font-semibold text-lg">{project.title}</h3>
                     <p className="text-sm text-gray-500">{project.category}</p>
                   </div>
                   <FiArrowRight className="text-green-500 text-xl" />
@@ -85,13 +110,14 @@ const GlobalProjects = () => {
           ))}
         </div>
 
-        {/* Navigation Arrows */}
+        {/* Navigation Buttons */}
         <button
           onClick={prevSlide}
-          className="absolute top-1/2 left-2 -translate-y-1/2 bg-green-100 text-green-500 p-2 rounded-full hover:bg-green-200 transition"
+          className="absolute top-1/2 left-2 -translate-y-1/2 bg-white border border-green-500 text-green-600 p-2 rounded-full hover:bg-green-100 transition"
         >
           <FiArrowLeft size={20} />
         </button>
+
         <button
           onClick={nextSlide}
           className="absolute top-1/2 right-2 -translate-y-1/2 bg-green-500 text-white p-2 rounded-full hover:bg-green-600 transition"
@@ -99,7 +125,7 @@ const GlobalProjects = () => {
           <FiArrowRight size={20} />
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 
