@@ -5,6 +5,8 @@ import Subscrib from '../Subscrib/Subscrib';
 import ServicesSection from '../ServicesSection/ServicesSection';
 import Success from '../Success/Success';
 import GlobalProjects from '../GlobalProjects/GlobalProjects';
+import Colabaration from '../Colabaration/Colabaration';
+import Pricing from '../Pricing/Pricing';
 
 const Home = () => {
     return (
@@ -50,6 +52,8 @@ const Home = () => {
             <Subscrib />
             <GlobalProjects />
             <Success />
+            <Pricing />
+            <Colabaration />
         </div>
     );
 };
