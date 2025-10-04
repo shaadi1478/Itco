@@ -9,6 +9,7 @@ import Colabaration from '../Colabaration/Colabaration';
 import Pricing from '../Pricing/Pricing';
 import Footer from '../Footer/Footer';
 import Blogs from '../Blogs/Blogs';
+import heroimage from "../../assets/heroimage.png"
 
 const Home = () => {
     return (
@@ -68,7 +69,7 @@ const Home = () => {
         {/* Right Image Section */}
         <div className="flex justify-center md:justify-end">
           <img
-            src="/public/heroimage.png"
+            src="https://i.postimg.cc/y8QyGLkW/heroimage.png"
             alt="Hero"
             className="w-[90%] sm:w-[450px] md:w-[550px] lg:w-[636px] h-auto object-cover rounded-lg"
           />

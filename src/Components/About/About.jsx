@@ -8,7 +8,7 @@ const About = () => {
         <div className="flex justify-center w-full md:w-1/2">
           <img
             className="w-full max-w-[636px] h-auto rounded-lg object-cover"
-            src="/public/Image (1).png"
+            src="https://i.postimg.cc/76mH1JKp/Image-1.png"
             alt="About company"
           />
         </div>

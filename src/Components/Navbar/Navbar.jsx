@@ -39,7 +39,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center max-w-[1296px] mx-auto px-6 py-4">
           {/* Logo */}
           <h1 className="text-2xl text-[#16A571] font-bold flex items-center gap-2">
-            <img src="/public/logo.png" alt="logo" className="w-8 h-8" />
+            <img src="https://i.postimg.cc/brgttvnt/logo.png" alt="logo" className="w-8 h-8" />
             Itco
           </h1>
 

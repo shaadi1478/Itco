@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Logo & Description */}
         <div>
           <h1 className="flex items-center text-2xl font-bold mb-4">
-            <img src="/logo.png" alt="Itco Logo" className="w-10 h-10 mr-2" />
+            <img src="https://i.postimg.cc/brgttvnt/logo.png" alt="Itco Logo" className="w-10 h-10 mr-2" />
             Itco
           </h1>
           <p className="text-sm mb-4 leading-relaxed">

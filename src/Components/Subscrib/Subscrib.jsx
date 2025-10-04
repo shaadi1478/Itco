@@ -7,7 +7,7 @@ const Subscribe = () => {
         {/* --- Left Image --- */}
         <div className="w-full lg:w-1/2 flex justify-center">
           <img
-            src="/public/Rectangle 4638.png"
+            src="https://i.postimg.cc/gk9zVpsr/Rectangle-4638.pngpng"
             alt="Newsletter"
             className="w-full max-w-[550px] h-auto object-cover rounded-lg"
           />

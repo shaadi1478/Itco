@@ -54,7 +54,7 @@ const Success = () => {
         {/* Right Side (Image) */}
         <div className="flex justify-center">
           <img
-            src="/public/success.png"
+            src="https://i.postimg.cc/KctSyM7t/success.png"
             alt="Business Discussion"
             className="rounded-xl shadow-md w-full max-w-md"
           />
