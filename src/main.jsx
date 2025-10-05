@@ -10,6 +10,8 @@ import {
 import Root from "./Components/Root/Root.jsx";
 import ErrorPage from "./Components/ErrorPage/ErrorPage.jsx";
 import Home from "./Components/Home/Home.jsx";
+import AboutSection from "./Components/AboutSection/AboutSection.jsx";
+import Services from "./Components/Services/Services.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +22,14 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+      {
+        path: "/about",
+        element: <AboutSection />
+      },
+      {
+        path: "/services",
+        element: <Services />
+      }
     ],
   },
 ]);

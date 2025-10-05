@@ -28,7 +28,7 @@ const Subscribe = () => {
             <input
               type="email"
               placeholder="Enter your email"
-              className="w-full sm:w-[300px] px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+              className="w-full sm:w-[300px] px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400 placeholder:text-white text-white"
             />
             <button className="bg-green-500 text-white px-6 py-2 rounded-md font-semibold hover:bg-green-400 transition">
               Submit Now

@@ -1,5 +1,9 @@
 import React from "react";
-
+import sp1 from "../../assets/sp1 1.png"
+import sp2 from "../../assets/sp4 1.png"
+import sp3 from "../../assets/sp5 1.png"
+import sp4 from "../../assets/sp7 1.png"
+import sp5 from "../../assets/sp8 1.png"
 const Colabaration = () => {
   return (
     <section className="bg-[#164343] w-full py-20">
@@ -15,27 +19,27 @@ const Colabaration = () => {
         {/* Logos Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 items-center justify-items-center">
           <img
-            src="/public/sp1 1.png"
+            src={sp1}
             alt="Client Logo 1"
             className="h-16 object-contain"
           />
           <img
-            src="/public/sp4 1.png"
+            src={sp2}
             alt="Client Logo 2"
             className="h-16 object-contain"
           />
           <img
-            src="/public/sp5 1.png"
+            src={sp3}
             alt="Client Logo 3"
             className="h-16 object-contain"
           />
           <img
-            src="/public/sp7 1.png"
+            src={sp4}
             alt="Client Logo 4"
             className="h-16 object-contain"
           />
           <img
-            src="/public/sp8 1.png"
+            src={sp5}
             alt="Client Logo 5"
             className="h-16 object-contain"
           />

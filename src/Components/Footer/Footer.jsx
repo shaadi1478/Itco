@@ -1,5 +1,7 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import footerimage1 from "../../assets/footerimage.png"
+import footerimage2 from "../../assets/footerimage2.png"
 
 const Footer = () => {
   return (
@@ -52,14 +54,14 @@ const Footer = () => {
           <h2 className="text-xl font-semibold mb-4">Recent Posts</h2>
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src="/public/footerimage.png" alt="" className="w-16 h-16 object-cover rounded" />
+              <img src={footerimage1} alt="" className="w-16 h-16 object-cover rounded" />
               <div>
                 <p className="text-xs text-gray-300">October 2, 2023</p>
                 <p className="text-sm font-medium">Efficiency redefined through technology</p>
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <img src="/public/footerimage2.png" alt="" className="w-16 h-16 object-cover rounded" />
+              <img src={footerimage2} alt="" className="w-16 h-16 object-cover rounded" />
               <div>
                 <p className="text-xs text-gray-300">October 9, 2023</p>
                 <p className="text-sm font-medium">IT Solution for your Company</p>

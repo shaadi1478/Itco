@@ -1,4 +1,5 @@
 import React from "react";
+import point from "../../assets/point.png"
 
 const About = () => {
   return (
@@ -32,15 +33,15 @@ const About = () => {
 
           <div className="mt-5 flex flex-col gap-2 text-sm md:text-base text-center md:text-left">
             <p className="flex items-center gap-2 justify-center md:justify-start">
-              <img src="/public/point.png" alt="" className="w-4 h-4" />
+              <img src={point} alt="" className="w-4 h-4" />
               Development of Financial Models
             </p>
             <p className="flex items-center gap-2 justify-center md:justify-start">
-              <img src="/public/point.png" alt="" className="w-4 h-4" />
+              <img src={point} alt="" className="w-4 h-4" />
               Nifty team is a diverse network of consultants
             </p>
             <p className="flex items-center gap-2 justify-center md:justify-start">
-              <img src="/public/point.png" alt="" className="w-4 h-4" />
+              <img src={point} alt="" className="w-4 h-4" />
               Industry professionals with a global mindset
             </p>
           </div>

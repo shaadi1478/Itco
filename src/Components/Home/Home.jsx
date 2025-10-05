@@ -9,12 +9,16 @@ import Colabaration from '../Colabaration/Colabaration';
 import Pricing from '../Pricing/Pricing';
 import Footer from '../Footer/Footer';
 import Blogs from '../Blogs/Blogs';
-import heroimage from "../../assets/heroimage.png"
+
+// import heroimage from "../../assets/heroimage.png"
+import Ellipse from "../../assets/Ellipse 10.png"
+import Ellipse2 from "../../assets/Ellipse 8.png"
+import Ellipse3 from "../../assets/Ellipse 12.png"
 
 const Home = () => {
     return (
         <div>
-             <section className="bg-[#0F3D3E] text-white">
+             <section className="bg-[#0F3D3E] text-white ">
       <div className="flex flex-col md:flex-row items-center justify-between max-w-[1296px] mx-auto px-6 md:px-10 py-12 md:py-20 gap-10">
         {/* Left Text Section */}
         <div className="max-w-lg text-center md:text-left">
@@ -42,17 +46,17 @@ const Home = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3 mt-8">
             <div className="flex -space-x-3">
               <img
-                src="/public/Ellipse 10.png"
+                src={Ellipse}
                 alt="team"
                 className="w-10 h-10 rounded-full border border-white"
               />
               <img
-                src="/public/Ellipse 8.png"
+                src={Ellipse2}
                 alt="team"
                 className="w-10 h-10 rounded-full border border-white"
               />
               <img
-                src="/public/Ellipse 12.png"
+                src={Ellipse3}
                 alt="team"
                 className="w-10 h-10 rounded-full border border-white"
               />
