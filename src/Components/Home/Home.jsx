@@ -88,7 +88,6 @@ const Home = () => {
             <Pricing />
             <Colabaration />
             <Blogs />
-            <Footer />
         </div>
     );
 };

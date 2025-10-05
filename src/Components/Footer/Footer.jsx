@@ -6,6 +6,9 @@ import footerimage2 from "../../assets/footerimage2.png"
 const Footer = () => {
   return (
     <footer className="bg-[#164343F2] text-white py-12">
+      <div>
+        
+      </div>
       <div className="max-w-[1296px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4">
         
         {/* Logo & Description */}
@@ -27,7 +30,7 @@ const Footer = () => {
         </div>
 
         {/* Services */}
-        <div>
+        <div className="hidden md:block">
           <h2 className="text-xl font-semibold mb-4">Our Services</h2>
           <ul className="space-y-2 text-sm">
             <li>Tech Solutions</li>
@@ -38,7 +41,7 @@ const Footer = () => {
         </div>
 
         {/* Links */}
-        <div>
+        <div className="hidden md:block">
           <h2 className="text-xl font-semibold mb-4">Links</h2>
           <ul className="space-y-2 text-sm">
             <li>What We Do</li>
