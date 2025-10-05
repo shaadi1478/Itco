@@ -5,7 +5,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/f
 
 const Contact = () => {
     return (
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-gray-50 mb-5">
             <div className="max-w-[1296px] mx-auto px-6">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">

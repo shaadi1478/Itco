@@ -1,15 +1,35 @@
 import React from "react";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
-import footerimage1 from "../../assets/footerimage.png"
-import footerimage2 from "../../assets/footerimage2.png"
+import footerimage1 from "../../assets/footerimage.png";
+import footerimage2 from "../../assets/footerimage2.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#164343F2] text-white py-12">
-      <div>
-        
+    <footer className="bg-[#164343F2] text-white pt-40 relative">
+
+      {/* Newsletter - Footer উপরের দিকে */}
+      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-[1296px]">
+        <div className="bg-[#16A571] bg-opacity-90 p-6 rounded-xl flex flex-col md:flex-row items-center justify-between gap-4 shadow-lg">
+          <h2 className="text-lg md:text-xl font-bold text-center md:text-left text-white">
+            Subscribe to Our Newsletter for the daily Updates
+          </h2>
+
+          {/* Input with button inside */}
+          <div className="relative w-full md:w-1/2">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="p-3 pr-24 rounded-md border border-gray-300 text-black w-full bg-white"
+            />
+            <button className="absolute top-0 right-0 h-full bg-[#16A571] text-white px-4 rounded-r-md font-semibold hover:bg-green-600 transition">
+              Submit
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="max-w-[1296px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4">
+
+      {/* Main Footer Grid */}
+      <div className="max-w-[1296px] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-4 mt-0">
         
         {/* Logo & Description */}
         <div>
@@ -21,7 +41,7 @@ const Footer = () => {
             Mauris ut enim sit amet lacus ornare ullamcorper. Praesent placerat 
             neque purus, rhoncus tincidunt odio ultrices. Sed odio feugiat feugiat felis.
           </p>
-          <div className="flex gap-3 mt-4 text-lg">
+          <div className="flex gap-4 mt-4 text-2xl">
             <FaFacebook className="hover:text-blue-500 cursor-pointer transition-colors" />
             <FaTwitter className="hover:text-sky-400 cursor-pointer transition-colors" />
             <FaLinkedin className="hover:text-blue-600 cursor-pointer transition-colors" />

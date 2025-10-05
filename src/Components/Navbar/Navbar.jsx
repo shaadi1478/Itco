@@ -19,7 +19,7 @@ const Navbar = () => {
     currentPath === "/"
       ? "Home"
       : currentPath.slice(1).charAt(0).toUpperCase() +
-        currentPath.slice(2).toLowerCase();
+      currentPath.slice(2).toLowerCase();
 
   useEffect(() => {
     if (
@@ -35,9 +35,9 @@ const Navbar = () => {
 
   return (
     <header
- className={`w-full bg-[#0F3D3E] text-white transition-all duration-700 ease-in-out
+      className={`w-full bg-[#0F3D3E] text-white transition-all duration-700 ease-in-out
     ${currentPath === "/" ? "h-[120px] md:h-[150px]" : "h-[200px] md:h-[250px]"
-  }`}    >
+        }`}    >
       {/* --- Top Contact Bar --- */}
       <div className="hidden lg:flex justify-between items-center max-w-[1296px] mx-auto py-2 text-sm px-6">
         <div className="flex flex-wrap items-center gap-6">

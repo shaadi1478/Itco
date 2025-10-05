@@ -14,6 +14,7 @@ import Blogs from '../Blogs/Blogs';
 import Ellipse from "../../assets/Ellipse 10.png"
 import Ellipse2 from "../../assets/Ellipse 8.png"
 import Ellipse3 from "../../assets/Ellipse 12.png"
+import Testimonial from '../Testtimonial/Testtimonial';
 
 const Home = () => {
     return (
@@ -85,6 +86,7 @@ const Home = () => {
             <Subscrib />
             <GlobalProjects />
             <Success />
+            <Testimonial />
             <Pricing />
             <Colabaration />
             <Blogs />
