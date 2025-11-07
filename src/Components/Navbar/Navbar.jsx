@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 import { FiMail, FiPhoneCall, FiMenu, FiX } from "react-icons/fi";
 import { MdLocationOn } from "react-icons/md";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation, Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ const Navbar = () => {
     currentPath === "/"
       ? "Home"
       : currentPath.slice(1).charAt(0).toUpperCase() +
-      currentPath.slice(2).toLowerCase();
+        currentPath.slice(2).toLowerCase();
 
   useEffect(() => {
     if (
@@ -33,11 +33,17 @@ const Navbar = () => {
     }
   }, [location]);
 
+  // Custom Active Link Style
+  const activeClass =
+    "text-green-500 font-semibold border-b-2 border-green-500 transition-all";
+  const inactiveClass = "hover:text-green-400 transition";
+
   return (
     <header
       className={`w-full bg-[#0F3D3E] text-white transition-all duration-700 ease-in-out
-    ${currentPath === "/" ? "h-[120px] md:h-[150px]" : "h-[200px] md:h-[250px]"
-        }`}    >
+      ${currentPath === "/" ? "h-[120px] md:h-[150px]" : "h-[200px] md:h-[250px]"}
+      `}
+    >
       {/* --- Top Contact Bar --- */}
       <div className="hidden lg:flex justify-between items-center max-w-[1296px] mx-auto py-2 text-sm px-6">
         <div className="flex flex-wrap items-center gap-6">
@@ -74,24 +80,54 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex gap-6 items-center">
-            <Link to="/" className="hover:text-green-400">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? activeClass : inactiveClass
+              }
+            >
               Home
-            </Link>
-            <Link to="/about" className="hover:text-green-400">
+            </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? activeClass : inactiveClass
+              }
+            >
               About
-            </Link>
-            <Link to="/services" className="hover:text-green-400">
+            </NavLink>
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                isActive ? activeClass : inactiveClass
+              }
+            >
               Services
-            </Link>
-            <Link to="/projects" className="hover:text-green-400">
+            </NavLink>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                isActive ? activeClass : inactiveClass
+              }
+            >
               Projects
-            </Link>
-            <Link to="/blogs" className="hover:text-green-400">
+            </NavLink>
+            <NavLink
+              to="/blogs"
+              className={({ isActive }) =>
+                isActive ? activeClass : inactiveClass
+              }
+            >
               Blogs
-            </Link>
-            <Link to="/contacts" className="hover:text-green-400">
+            </NavLink>
+            <NavLink
+              to="/contacts"
+              className={({ isActive }) =>
+                isActive ? activeClass : inactiveClass
+              }
+            >
               Contact
-            </Link>
+            </NavLink>
 
             {/* Quote Button */}
             <button className="ml-4 bg-green-400 text-black px-4 py-2 rounded-md font-semibold hover:bg-green-300 transition">
@@ -111,48 +147,27 @@ const Navbar = () => {
         {/* --- Mobile Menu Dropdown --- */}
         {menuOpen && (
           <div className="md:hidden bg-[#0F3D3E] text-white px-6 py-4 flex flex-col gap-4">
-            <Link
-              to="/"
-              className="hover:text-green-400"
-              onClick={() => setMenuOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              to="/about"
-              className="hover:text-green-400"
-              onClick={() => setMenuOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              to="/services"
-              className="hover:text-green-400"
-              onClick={() => setMenuOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
-              to="/projects"
-              className="hover:text-green-400"
-              onClick={() => setMenuOpen(false)}
-            >
-              Projects
-            </Link>
-            <Link
-              to="/blogs"
-              className="hover:text-green-400"
-              onClick={() => setMenuOpen(false)}
-            >
-              Blogs
-            </Link>
-            <Link
-              to="/contacts"
-              className="hover:text-green-400"
-              onClick={() => setMenuOpen(false)}
-            >
-              Contact
-            </Link>
+            {[
+              { path: "/", name: "Home" },
+              { path: "/about", name: "About" },
+              { path: "/services", name: "Services" },
+              { path: "/projects", name: "Projects" },
+              { path: "/blogs", name: "Blogs" },
+              { path: "/contacts", name: "Contact" },
+            ].map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-green-400 font-semibold"
+                    : "hover:text-green-400"
+                }
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.name}
+              </NavLink>
+            ))}
             <button className="bg-green-400 text-black px-4 py-2 rounded-md font-semibold hover:bg-green-300 transition">
               Get A Quote
             </button>

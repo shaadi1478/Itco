@@ -45,7 +45,7 @@ const testimonials = [
 
 const TestimonialSlider = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3, // Desktop view
@@ -63,7 +63,7 @@ const TestimonialSlider = () => {
   };
 
   return (
-    <div className="py-16 bg-gray-100">
+    <div className="py-16 ">
       <div className="max-w-[1296px] mx-auto px-4">
         <h4 className="text-green-500 font-semibold mb-2">Clients Testimonials</h4>
         <h2 className="text-3xl md:text-4xl font-bold mb-12">What Our Customers Say</h2>
