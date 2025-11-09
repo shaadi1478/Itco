@@ -1,16 +1,72 @@
-# React + Vite
+# 🖥️ ITCO49 — Modern Web Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/Frontend-React.js-61dafb?logo=react)
+![Tailwind](https://img.shields.io/badge/Style-TailwindCSS-38bdf8?logo=tailwindcss)
+![Netlify](https://img.shields.io/badge/Deployed-on-Netlify-00c7b7?logo=netlify)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-Currently, two official plugins are available:
+🌐 **Live Demo:** [https://itco49.netlify.app/](https://itco49.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Project Overview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+**ITCO49** is a modern, responsive web application built using React.js and Tailwind CSS.  
+It showcases a clean design, professional UI, and fast performance — perfect for business landing pages, portfolios, or IT service websites.
 
-## Expanding the ESLint configuration
+The project is optimized for both desktop and mobile, ensuring a consistent user experience across all devices.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🖼️ Screenshots
+
+### 🏠 Home Page
+![Home Page](./assets/screenshots/homepage.png)
+
+### 💼 Services Section
+![Services](./assets/screenshots/services.png)
+
+### 📞 Contact Page
+![Contact Page](./assets/screenshots/contact.png)
+
+> 📸 **Tip:**  
+> Replace these placeholder images with your own screenshots:  
+> - Save them inside `src/assets/screenshots/`  
+> - Use `.png` or `.jpg` formats  
+> - Make sure images are clear and cropped properly
+
+---
+
+## ✨ Features
+
+- ⚛️ Built with **React.js**  
+- 🎨 Styled using **Tailwind CSS**  
+- 📱 Fully responsive design  
+- ⚡ Fast performance and SEO-friendly  
+- 🧩 Component-based architecture  
+- 🚀 Deployed on **Netlify**  
+- 🧭 Clean navigation and layout structure  
+
+---
+
+## 🧰 Tech Stack
+
+| Category          | Technology |
+|-------------------|-------------|
+| **Frontend** | React.js |
+| **Styling** | Tailwind CSS |
+| **Routing (if used)** | React Router DOM |
+| **Deployment** | Netlify |
+| **Icons** | React Icons |
+| **Package Manager** | npm / yarn |
+
+---
+
+## ⚙️ Installation & Setup
+
+Follow the steps below to run ITCO49 locally 👇
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/<your-username>/itco49.git
+cd itco49
